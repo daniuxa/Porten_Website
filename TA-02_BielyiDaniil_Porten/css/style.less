@@ -1,0 +1,54 @@
+// out: "style.css", compress: false, sourceMap: false
+
+body{
+    margin: 0;   
+    font-size: 14px;
+    background-color: #000000;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+   
+}
+
+*{
+    box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: #49484f;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #969696;
+    border-radius: 10px;   
+    transition: all 0.2s linear;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #fff;
+}
+
+@import 'blocks/wrapper.less';
+@import 'blocks/navigation.less';
+@import 'blocks/header.less';
+@import 'blocks/intro.less';
+@import 'blocks/features.less';
+@import 'blocks/collection.less';
+@import 'blocks/goods.less';
+@import 'blocks/info.less';
+@import 'blocks/brands.less';
+@import 'blocks/footer.less';
+@import 'blocks/copyright.less';
+@import 'blocks/cart.less';

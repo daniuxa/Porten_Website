@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+ api:
+  image: watches_api_image
+  restart: unless-stopped
+  container_name: watches_api_container
+  build:
+   context: .
+   dockerfile: Porten_API/Dockerfile
+  ports:
+  - "8080:80" 
+  depends_on:
+  - db
+  networks:
+  - watches_net
+  environment:
+   - ASPNETCORE_ENVIRONMENT=Release
+ db:
+  image: mcr.microsoft.com/mssql/server:2022-latest
+  container_name: watches_db_container
+  ports: 
+  - "1433:1433"
+  environment:
+  - SA_PASSWORD=WatchAPI123
+  - ACCEPT_EULA=Y
+  networks:
+  - watches_net
+  volumes:
+  - watches_db_container:/var/lib/mssql/data
+
+networks:
+ watches_net:
+  driver: bridge
+
+volumes:
+  watches_db_container:
+

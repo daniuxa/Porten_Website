@@ -1,0 +1,298 @@
+// main: ../style.less
+
+.features{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+
+}
+
+.features__season{
+    width: 55%;
+    padding-top: 75px;
+}
+
+.features__season_title{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+    font-family: 'Playfair Display', serif;
+
+    &.span{
+        font-size: 20px;
+    }
+
+    &:after{
+        display: block;
+        content: "";
+        width: 120px;
+        height: 2px;
+        background-color: #969a9b;
+        position: absolute;
+        bottom: -35px;
+        left: 43%;
+        z-index: 10;
+
+    }
+}
+
+.features__season_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.features__season_item{
+    display: flex;
+    flex-direction: column;
+  
+
+}
+
+.features__season_item_photo{
+    background-color: #191b1c;
+    padding: 28px;  
+    padding-right: 32px;
+    padding-left: 32px;  
+    height: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.features__season_item_name{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.features__season_item_price{
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.features__collection{
+    background-image: url("../img/features/human.jpg");
+    height: 695px;
+    width: 45%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+.features__collection_title{
+    padding-top: 475px;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin-bottom: 22px;
+
+    &::after{
+        display: block;
+        content: "";
+        width: 125px;
+        height: 1.5px;
+        background-color: #969a9b;     
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+}
+
+.features__collection_btn{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 160px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &::after{
+        display: block;
+        content: "";
+        height: 200px;
+        width: 1.4px;
+        background-color: #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 20px;
+        bottom: -30px;
+        z-index: 100;
+        transition: all 0.4s linear;
+    }
+
+    &:hover::after{
+       transform: translate3d(300px,0,0);
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .features__season_item{
+        align-items: center;
+    }
+    .features__season_item_photo{
+        padding-right: 22px;
+        padding-left: 28px;
+    }
+    .features__season{
+        width: 65%;
+    }
+    .features__collection{
+        width: 35%;
+        height: auto;
+        padding-bottom: 30px;
+        background-position: 0 0;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .features__season{
+        padding-top: 30px;
+    }
+    .features__season_item{
+        align-items: center;
+    }
+    .features__season_item_photo{
+        padding-right: 22px;
+        padding-left: 28px;
+        margin-bottom: 10px;
+    }
+    .features__season_item_name{
+        margin-bottom: 2px;
+    }
+    .features__season{
+        width: 65%;
+    }
+    .features__collection{
+        width: 35%;
+        height: auto;
+        padding-bottom: 30px;
+        background-position: 0 0;
+    }
+    .features__season_title{
+        margin-bottom: 40px;
+
+        &::after{
+            bottom: -10px;
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .features{
+        flex-direction: column;
+    }
+    .features__season{
+        padding-top: 30px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .features__season_item{
+        align-items: center;
+        width: 30%;
+    }
+    .features__season_item_photo{
+        padding-right: 22px;
+        padding-left: 28px;
+        margin-bottom: 10px;
+        background-color: #191b1cb0;
+        border-radius: 15px;
+        width: 100%;
+    }
+    .features__season_item_name{
+        margin-bottom: 2px;
+    }
+    .features__collection{
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+        background-position: 0 0;
+    }
+    .features__season_title{
+        margin-bottom: 40px;
+
+        &::after{
+            bottom: -10px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .features{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .features__season_block{
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__season{
+        padding-top: 30px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .features__season_item{
+        align-items: center;
+        width: 90%;
+        margin-bottom: 35px;
+    }
+    .features__season_item_photo{
+        padding-right: 22px;
+        padding-left: 28px;
+        margin-bottom: 8px;
+        background-color: #191b1cb0;
+        border-radius: 15px;
+        width: 100%;
+
+        & img{
+            width: 160px;
+            height: 240px;
+        }
+
+    }
+    .features__season_item_name{
+        margin-bottom: 0px;
+    }
+    .features__collection{
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+        background-position: 0 0;
+    }
+    .features__season_title{
+        margin-bottom: 40px;
+
+        &::after{
+            bottom: -10px;
+        }
+
+    }
+}
+
+

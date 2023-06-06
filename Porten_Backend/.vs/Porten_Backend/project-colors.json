@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "39bb07c9-9711-45a2-8ec8-27e6f497a894": {
+      "ProjectGuid": "39bb07c9-9711-45a2-8ec8-27e6f497a894",
+      "DisplayName": "Porten_API",
+      "ColorIndex": 0
+    },
+    "3198a78e-8047-4253-86e6-e1da85f86ec8": {
+      "ProjectGuid": "3198a78e-8047-4253-86e6-e1da85f86ec8",
+      "DisplayName": "Docker",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
